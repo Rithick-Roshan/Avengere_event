@@ -154,18 +154,10 @@ body, h1, h2, p, ul, li {
 
   .title1 h1 {
     background-color: rgba(0, 0, 0, 0.1);
-    background-image: url("images/04_copia.jpg");
     background-repeat: repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    text-transform: uppercase;
     font-family: 'Steelfish Rg', 'helvetica neue', helvetica, arial, sans-serif;
     font-weight: 800;
-    animation: back 10s linear infinite;
-
-    -webkit-text-stroke: 1px black; 
-    text-shadow: 
+	text-shadow: 
         0px 0px 5px rgba(255, 255, 255, 0.6), 
         0px 0px 10px rgba(255, 255, 255, 0.4), 
         0px 0px 20px rgba(255, 255, 255, 0.3), 
@@ -173,20 +165,11 @@ body, h1, h2, p, ul, li {
 }
 
   .title1 h2{
-	background-color: #eee;
-    background-image: url("images/wallpaperflare.com_wallpaper.jpg");
+	background-color: rgba(0, 0, 0, 0.1);
     background-repeat: repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    text-transform: uppercase;
     font-family: 'Steelfish Rg', 'helvetica neue', helvetica, arial, sans-serif;
     font-weight: 800;
-    animation: back 10s linear infinite;
-
-  
-    -webkit-text-stroke: 1px black; 
-    text-shadow: 
+	text-shadow: 
         0px 0px 5px rgba(255, 255, 255, 0.6), 
         0px 0px 10px rgba(255, 255, 255, 0.4), 
         0px 0px 20px rgba(255, 255, 255, 0.3), 
