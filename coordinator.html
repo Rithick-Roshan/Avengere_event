@@ -15,13 +15,16 @@
         background-image: url(images/wallpaperflare.com_wallpaper\ \(5\)\ \(2\).jpg);
 	      background-size: cover;
 	      background-position: center;
-	      color: #fff;
-	      position: relative;
 	      background-size: cover;
 	      background-position: center;
 	      background-repeat: no-repeat;
 	      background-attachment: fixed;
+          overflow-x: hidden;
     
+}
+h1{
+    text-align: center;
+    margin-right: 25%;
 }
 #header{
     background:rgba(0,0,0,0.8);
@@ -82,7 +85,7 @@
 }
 
      body{
-    
+        width: 100%;
         display:flex;
         flex-direction: column;
         background-size: cover;
@@ -98,7 +101,7 @@
     .container
     {
         position:relative;
-        width:1100px;
+        width:100%;
        display:flex;
        justify-content: center;
        align-items: center;
@@ -108,8 +111,8 @@
 
     }
     .container .cards
-    {
-        position: relative;
+    {  align-items: center;
+        justify-content: center;
         max-width: 300px;
         height: 350px;
         background: blur;
@@ -117,12 +120,13 @@
         padding: 20px 15px;
         display:flex;
         flex-direction: column;
-        box-shadow: none;
         transition: 0.3s ease-in-out;
         border-radius: 50px;
 
     }
-
+     .container .cards img{
+        box-shadow: 0 0 5px wheat;
+     }
     .container .card:hover{
         height: 300px;
 
@@ -202,8 +206,6 @@ h1{
 </style>
      
     </head>
-
-
     <body>
       <header id="header">
           <div class="logo"><img src="images/ieee.png"> </div>
@@ -224,7 +226,7 @@ h1{
   <br>
   <br>
   <br>
-    <h1 class="header">BRANCH-COUNSELLOR</h1>
+    <h1 class="header" >BRANCH-COUNSELLOR</h1>
     <div class="container">
 
     <div class="cards">
@@ -241,7 +243,7 @@ h1{
 </div>
 </div>
     
-        <h1 class="header">PILLARS OF AVANZARE</h1>   <
+<h1 class="header">PILLARS OF AVANZARE</h1>   
     
 
 <div class="container">
@@ -364,7 +366,7 @@ h1{
 
 <div class="cards">
     <div class="imagebox">
-        <img src="images/karthi.jpg" width="200" height="200">
+        <img src="images/" width="200" height="200">
     </div>
     <div class="content">
         <h2>Mr.RITHICK ROSHAN S</h2>
