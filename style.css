@@ -751,14 +751,15 @@ body, h1, h2, p, ul, li {
 	.countdown-container {
 		text-align: center;
 		/* background-color: #000000; */
-		backdrop-filter: blur(50px);
+		backdrop-filter: blur(100px);
+		border-radius: 20px;
 		color: purple;
 	  }
 	  
 	  #countdown {
-		font-size: 3em;
+		font-size: 3rem;
 		margin-top: 20px;
-		color: yellow;
+		color: rgb(162, 255, 0);
 	  }
 	  .contact-section{
 		background-image: url(images/contact.jpg);
