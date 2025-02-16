@@ -5,114 +5,236 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body,html{
-        margin: 0;
-        padding: 0;
-        background-image: url(images/wallpaperflare.com_wallpaper\ \(5\)\ \(2\).jpg);
-          background-size: cover;
-          background-position: center;
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-attachment: fixed;
-          color: #fff;
-    }
-    .smaple_container{
-        width: 100%;
-        height: 100vh;
-    }
-    .headding{
-       background:rgba(0,0,0,0.3);
-       width: 100%;
-       height: 10vh;
-       display: flex;
-       align-items: center;
-       justify-content: space-between;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .home_button a{
-        color: #fff;
-        font-size: 26px;
-        text-decoration: none;
-    }
-    .home_button{
-        padding: 10px;
-        background-color:rgba(0,0,0,0.5) ;
-        margin-right:20px;
-        border-radius: 20px;
-    }
-    .home_button:hover{
-        padding: 10px;
-        background-color:rgba(0,0,0,0.7) ;
-        margin-right:20px;
-        border-radius: 50px;
-    }
-    .sample_img{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-    .sample_img img{
-        width: 15rem;
-        border-radius: 50%;
-    }
-    
-    
-    /*
-    .main_box{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .sample_box{
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        background-color: rgba(0,0,0,0.7);
-    }
-   .sample_button{
-    margin:20px 0px;
-    text-decoration: none;
-    display: inline-block;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    background: linear-gradient(45deg, #ff007f, #8000ff);
-    transition: all 0.3s ease-in-out;
-    text-transform: uppercase;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-   }
-   .sample_button:hover{
-    background: linear-gradient(45deg, #8000ff, #ff007f);
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-   }
-   .sample_button a{
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-   }
+        body, html {
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            position: relative;
+        }
 
-   .sample_ins ul li{
-       font-size: 26px;
-       font-weight: 700;
-       margin-bottom: 10px;
-   }
-   .sample_ins ul p{
-       font-size: 22px;
-       font-weight: 700;
-   }
-   h3{
-    font-size: 32px;
-    font-weight: 800;
-    color: green;
-   } */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(images/wallpaperflare.com_wallpaper\ \(5\)\ \(2\).jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+
+        .headding {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .home_button {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+
+        .home_button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .home_button a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .sample_content {
+            padding-top: 80px;
+        }
+
+        .title {
+            text-align: center;
+            padding: 2rem 0;
+            background: rgba(0, 0, 0, 0.6);
+            margin-bottom: 2rem;
+        }
+
+        .title h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #ff007f, #8000ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        .event-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .event-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .event-image:hover {
+            transform: scale(1.05);
+        }
+
+        .main_box {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .sample_box {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            margin-bottom: 2rem;
+        }
+
+        .sample_ins_heading h2 {
+            color: #ff007f;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .sample_ins h4 {
+            color: #8000ff;
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem;
+        }
+
+        .events {
+            margin-left: 2rem;
+        }
+
+        .events li {
+            margin: 0.8rem 0;
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        .event-description {
+            margin: 2rem 0;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        .event-price {
+            font-size: 1.2rem;
+            color: #ff007f;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .sample_button {
+            text-align: center;
+        }
+
+        .sample_button a {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, #ff007f, #8000ff);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .sample_button a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #8000ff, #ff007f);
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .overlay-content {
+            color: #fff;
+        }
+
+        .overlay-content p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+
+        .apply-link {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, #ff007f, #8000ff);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .apply-link:hover {
+            transform: scale(1.05);
+            background: linear-gradient(45deg, #8000ff, #ff007f);
+        }
+
+        @media (max-width: 768px) {
+            .title h1 {
+                font-size: 2rem;
+            }
+
+            .event-box {
+                grid-template-columns: 1fr;
+            }
+
+            .sample_box {
+                padding: 1.5rem;
+            }
+
+            .events li {
+                font-size: 1rem;
+            }
+
+            .event-description, .event-price {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 
@@ -126,17 +248,62 @@
         </div>
         <div class="sample_content">
             <div class="title" >
-                <h1 style="font-size: 38px;font-weight:900;text-align: center;">BRANCH-COUNSELLOR</h1>
+                <h1 style="font-size: 38px;font-weight:900;text-align: center;">CombO OffeR EventS/h1>
             </div>
             <div class="sample_img">
-                <img src="images/viji.jpg"  alt="">
-                <div class="content">
-                    <h3>DR.VIJAYALKSHMI J</h3>
-                    <p> <pre>Branch Counsellor,</pre>
-                       <pre> IEEE,KEC Student Branch.</pre>
-                        <pre>jvijayalakshmi.ece@kongu.edu</pre>
-                        <pre>Contact: 9659343425</pre></p>
+                <div class="event-box">
+                    <div class="event-images">
+                        <img class="event-image" src="images/paper.jpg" alt="Event 2">
+                        <img class="event-image" src="images/idea.jpg" alt="Event 3">
+                    </div>
+                    <div class="event-images1">
+                        <img class="event-image" src="images/project.jpg" alt="Event 3">
+                        <img class="event-image" src="images/robot.jpg" alt="Event 3">
+                    </div>
+                    <div class="event-images2">
+                        <img class="event-image" src="images/coding.jpg" alt="Event 3">
+                        <img class="event-image" src="images/photo.jpg" alt="Event 3">
+                    </div>
+                    <div class="event-images4">
+                        <img class="event-image" src="images/music.jpg" alt="Event 3">
+                        <img class="event-image" src="images/shortfilm.jpg" alt="Event 3">
+                        
+                    </div>
+            </div>
+            <div class="main_box">
+             <div class="sample_box">
+                 <div class="sample_ins_heading">
+                    <h2>INSTRUCTIONS</h2>
+                 </div>
+                 <div class="sample_ins">
+                    <h4>TECHNICAL EVENTS:</h4> 
+                <ul style="list-style-type: decimal; " class ="events">
+                    <li>Paper presentation</li>
+                    <li>Project presentation</li>
+                    <li>Idea presentation</li>>
+                    <li>Coding</li>
+                    <li>Line follower</li>
+                 </ul>
+                 <h4>NON-TECHNICAL EVENTS:</h4> 
+                 <ul style="list-style-type: decimal;" class ="events">
+                    <li>Shortflim</li>
+                    <li>Music fest</li>
+                    <li>Photography</li>
+                 </ul>
+                 <p class="event-description"><b>Combine these events for a unique experience.<br>Refreshment and lunch will be provided <br>Participants can participate in all the above events for this combo offer</b></p>
+                <p class="event-price"><b>IEEE Member : Rs.350 <br><br> NON-IEEE Member : Rs.400</b></p>
                 </div>
+            </div>
+            <div class="overlay">
+                <div class="overlay-content">
+                    <p>Special Combo Offer!</p>
+                    <p>Save 75% when you book all 8 events together.</p>
+                    <a href="https://forms.gle/K75Fvy7fFweXTHxg7" class="apply-link">Apply Now</a>
+                </div>
+            </div>
+                 <div class="sample_button">
+                    <a href="https://forms.gle/NwWe8BRaLPLM8b5E8">Register here</a>
+                 </div>
             </div>
         </div>
 
