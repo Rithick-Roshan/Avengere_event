@@ -750,9 +750,8 @@ body, h1, h2, p, ul, li {
 	}
 	.countdown-container {
 		text-align: center;
-		/* background-color: #000000; */
 		backdrop-filter: blur(100px);
-		border-radius: 20px;
+		border-radius: 10px;
 		color: purple;
 	  }
 	  
