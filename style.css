@@ -837,15 +837,26 @@ body, h1, h2, p, ul, li {
 		background: #0c1022;
 		z-index: 1;
 	}
-	
-	.eventdate{
+	.eventdate {
 		text-align: center;
-		height: 100%;
-		width: 160vh;
-		border-radius: 50px;
+		width: 90%; 
+		max-width: 600px; 
+		margin: 10px auto; 
+		padding: 10px; 
+		border-radius: 20px; 
 		color: #000000e5;
-		background: linear-gradient(180deg,rgba(0, 255, 153, 0.77), rgba(0, 255, 179, 0.77), rgba(0, 255, 179, 0.819));
-	  }
+		background: linear-gradient(180deg, rgba(0, 255, 153, 0.77), rgba(0, 255, 179, 0.77), rgba(0, 255, 179, 0.819));
+	}
+	
+	@media (max-width: 768px) {
+		.eventdate {
+			width: 95%;
+			padding: 8px; 
+			font-size: 14px;
+			border-radius: 15px;
+		}
+	}
+	
 	  
 	  
 	.box12 p{
