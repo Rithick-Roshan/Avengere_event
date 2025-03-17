@@ -838,6 +838,16 @@ body, h1, h2, p, ul, li {
 		z-index: 1;
 	}
 	
+	.eventdate{
+		text-align: center;
+		height: 100%;
+		width: 160vh;
+		border-radius: 50px;
+		color: #000000e5;
+		background: linear-gradient(180deg,rgba(0, 255, 153, 0.77), rgba(0, 255, 179, 0.77), rgba(0, 255, 179, 0.819));
+	  }
+	  
+	  
 	.box12 p{
 		
 		text-align: center;
@@ -874,6 +884,7 @@ body, h1, h2, p, ul, li {
 	.regg img{
        width: 85%;
 	}
+	
 	.clglogo{
 		position: absolute;
 		left: 50%;
